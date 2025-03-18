@@ -1,0 +1,258 @@
+.music-player {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.music-player::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+.music-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.cover-container {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.cover.rotating {
+  animation: rotate 8s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.song-info {
+  flex: 1;
+}
+
+.song-info h3 {
+  margin: 0 0 5px;
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.song-info p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.progress-container {
+  background: #f1f1f1;
+  border-radius: 5px;
+  height: 4px;
+  width: 100%;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.progress {
+  background: linear-gradient(90deg, #fbc2eb 0%, #a6c1ee 100%);
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.control-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0 10px;
+  color: #666;
+  transition: all 0.3s;
+}
+
+.control-btn:hover {
+  color: #a6c1ee;
+  transform: scale(1.1);
+}
+
+.play-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a6c1ee 0%, #fbc2eb 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 10px rgba(166, 193, 238, 0.3);
+}
+
+.play-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(166, 193, 238, 0.5);
+  color: white;
+}
+
+.prev-icon, .next-icon, .play-icon, .pause-icon {
+  font-style: normal;
+}
+
+.music-player-container {
+  width: 100%;
+  color: white;
+}
+
+.music-player-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.control-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.control-btn:hover {
+  transform: scale(1.1);
+}
+
+.play-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-info {
+  flex: 1;
+  margin: 0 15px;
+}
+
+.song-details {
+  margin-bottom: 8px;
+}
+
+.song-title {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.song-artist {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.progress-container {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.progress-bar {
+  height: 100%;
+  background: white;
+  border-radius: 2px;
+}
+
+.playlist-toggle {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.music-playlist {
+  margin-top: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.music-playlist h3 {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  opacity: 0.8;
+}
+
+.music-playlist ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.music-playlist li {
+  padding: 8px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.music-playlist li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.music-playlist li.active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.playlist-song-title {
+  font-size: 0.85rem;
+}
+
+.playlist-song-artist {
+  font-size: 0.75rem;
+  opacity: 0.7;
+} 
